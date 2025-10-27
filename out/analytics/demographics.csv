@@ -1,0 +1,22 @@
+metric,value
+Total Patients,1171
+Average Age,49.7
+Median Age,49.0
+Age Range,5–115
+Age Group - Child (0–12),86
+Age Group - Teen (13–18),74
+Age Group - Young Adult (19–35),246
+Age Group - Adult (36–50),200
+Age Group - Mid-Age (51–65),224
+Age Group - Senior (65+),341
+Gender - F,609
+Gender - M,562
+Race - white,965
+Race - black,101
+Race - asian,90
+Race - native,13
+Race - other,2
+Ethnicity - nonhispanic,1058
+Ethnicity - hispanic,113
+Marital Status - M,638
+Marital Status - S,153
