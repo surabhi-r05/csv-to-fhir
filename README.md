@@ -33,6 +33,7 @@ mkdocs serve
 ---
 
 ##  Folder Structure
+```text
 
 csv-to-fhir/
 │
@@ -55,7 +56,7 @@ csv-to-fhir/
 │
 ├── mkdocs.yml                 # MkDocs configuration file
 └── README.md                  # Project overview (this file)
-
+```
 ---
 
 ## 🧩 Tech Stack
