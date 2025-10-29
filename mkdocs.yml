@@ -1,0 +1,67 @@
+site_name: Healthcare Analytics Project
+site_url: https://surabhi-r05.github.io/csv-to-fhir/
+site_author: Surabhi R
+repo_url: https://github.com/surabhi-r05/csv-to-fhir
+repo_name: csv-to-fhir
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.share
+    - toc.integrate
+    - content.code.annotate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: pink
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: pink
+  font:
+    text: "Inter"
+    code: "Fira Code"
+
+nav:
+  - 🏠 Home: index.md
+  - 📊 Analytics:
+      - Quickstart: day1_quickstart.md
+      - Data Quality: day2_data_quality.md
+      - Demographics: day3_demographics.md
+      - Encounters: day4_encounters.md
+      - Observations: day5_observations.md
+      - Cohorts: day6_cohorts.md
+      - Statistical Tests: day7_stat_tests.md
+  - ⚙️ Pipeline:
+      - Analytics Pipeline: analytics.md
+      - Cohort Methods: cohort-methods.md
+  - 💡 Final Insights: insights.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - admonition
+  - codehilite
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.highlight
+  - pymdownx.tabbed
+
+plugins:
+  - search
+
+extra_css:
+  - styles/extra.css

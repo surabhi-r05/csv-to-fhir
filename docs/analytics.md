@@ -82,13 +82,10 @@ All analyses were run on **already-cleaned CSVs** located in `out/analytics/`.
   `median_los_by_class_hours.png` • `los_box.png` • `avg_los_by_class.png`
 
 
-**Outlier thresholds (95th percentile):**
-- ambulatory: 0.14 days
-- emergency: 0.10 days
-- inpatient: 1.17 days
-- outpatient: 0.04 days
-- urgentcare: 0.01 days
-- wellness: 0.02 days
+### Outlier Thresholds (95th Percentile)
+
+**Ambulatory:** 0.14 days | **Emergency:** 0.10 days | **Inpatient:** 1.17 days  
+**Outpatient:** 0.04 days | **Urgent Care:** 0.01 days | **Wellness:** 0.02 days
 
 
 ---
@@ -107,14 +104,16 @@ All analyses were run on **already-cleaned CSVs** located in `out/analytics/`.
 - Charts:  
   `vitals_summary_bar.png` • `bp_vs_bmi_scatter.png` • `vitals_correlation_heatmap.png`
 
-**Highlights**
-| Vital | Mean | Median | Coverage |
-|-------|------|---------|----------|
-| BMI | 26.4 | 27.8 | 96.8 % |
-| Systolic BP | 121 mmHg | 119 mmHg | 100 % |
-| Diastolic BP | 80.6 mmHg | 80 mmHg | 100 % |
-| Heart Rate | 79 bpm | 79 bpm | 100 % |
-| Temperature | 37.6 °C | 37.6 °C | 48.9 % |
+## Highlights
+
+| Vital          | Mean     | Median   | Coverage |
+|----------------|----------|----------|----------:|
+| BMI            | 26.4     | 27.8     | 96.8 %    |
+| Systolic BP    | 121 mmHg | 119 mmHg | 100 %     |
+| Diastolic BP   | 80.6 mmHg| 80 mmHg  | 100 %     |
+| Heart Rate     | 79 bpm   | 79 bpm   | 100 %     |
+| Temperature    | 37.6 °C  | 37.6 °C  | 48.9 %    |
+
 
 **Charts**
 - `bp_vs_bmi_scatter.png` → higher BMI linked to elevated BP  
@@ -134,11 +133,13 @@ All analyses were run on **already-cleaned CSVs** located in `out/analytics/`.
 - `cohort_summary_detailed.csv`
 
 **Summary**
-| Cohort | Patients | Avg Age | Avg Encounters | % F | % M |
-|---------|-----------|---------|----------------|-----|-----|
-| Older Adults | 349 | 82.4 | 77.0 | 47.3 | 52.7 |
-| Multi-Encounter | 1168 | 49.9 | 45.7 | 51.9 | 48.1 |
-| Hypertensive-like | 157 | 48.8 | 74.1 | 51.6 | 48.4 |
+
+| Cohort           | Patients | Avg Age | Avg Encounters |   % F  |   % M  |
+|------------------|----------:|---------:|----------------:|-------:|-------:|
+| Older Adults     | 349       | 82.4     | 77.0            | 47.3   | 52.7   |
+| Multi-Encounter  | 1168      | 49.9     | 45.7            | 51.9   | 48.1   |
+| Hypertensive-like| 157       | 48.8     | 74.1            | 51.6   | 48.4   |
+
 
 ---
 
@@ -149,10 +150,12 @@ All analyses were run on **already-cleaned CSVs** located in `out/analytics/`.
 - **χ² test:** Hypertensive-like × Gender independence
 
 **Results**
-| Test | Statistic | p value | Interpretation |
-|------|-----------:|---------:|----------------|
-| t-test (LOS Older vs Others) | −2.60 | 0.0093 | Significant difference |
-| χ² (Hypertensive vs Gender) | 0.00 | 1.000 | Independent |
+
+| Test                         | Statistic | p value | Interpretation         |
+|------------------------------|-----------:|---------:|------------------------|
+| t-test (LOS Older vs Others) | −2.60      | 0.0093   | Significant difference |
+| χ² (Hypertensive vs Gender)  | 0.00       | 1.000    | Independent            |
+
 
 **Interpretation**
 - Older adults **stay longer on average**, significant at p < 0.01.  

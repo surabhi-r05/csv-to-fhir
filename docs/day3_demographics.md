@@ -20,15 +20,16 @@ Two complementary visualizations were generated:
 - **Median Age:** 49.0 years  
 - **Age Range:** 5 to 115 years
 
-**Population Spread by Age Group**
-| Age Group | Patients |
-|----------|----------:|
-| Child (0–12) | 86 |
-| Teen (13–18) | 74 |
-| Young Adult (19–35) | 246 |
-| Adult (36–50) | 200 |
-| Mid-Age (51–65) | 224 |
-| **Senior (65+)** | **341** |
+## Population Spread by Age Group
+
+| Age Group        | Patients |
+|------------------|----------:|
+| Child (0–12)     | 86        |
+| Teen (13–18)     | 74        |
+| Young Adult (19–35) | 246    |
+| Adult (36–50)    | 200       |
+| Mid-Age (51–65)  | 224       |
+| **Senior (65+)** | **341**   |
 
 ➡️ Seniors make up the largest group → important for chronic disease analytics.
 

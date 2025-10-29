@@ -1,0 +1,8 @@
+pandas
+numpy
+matplotlib
+pyproj
+shapely
+geopandas
+mkdocs
+mkdocs-material

@@ -12,7 +12,7 @@ Each finding connects to **real-world healthcare implications**.
 - **Older cohort:** 349 patients aged **82.4 years on avg**, with **~77 encounters/patient** — highest among all.
 
 📊 *Chart:*  
-![Median LOS by Class (Days)](../out/analytics/median_los_by_class.png)  
+![Median LOS by Class (Days)](images/median_los_by_class.png)  
 📄 *Data:* `los_summary.csv`, `stats_tests.csv`, `cohort_summary.csv`
 
 **Insight:** Plan additional inpatient and post-discharge support for geriatric care.
@@ -25,7 +25,7 @@ Each finding connects to **real-world healthcare implications**.
 - Median durations are **0.75 hours (ambulatory)** and **0.25 hours (wellness)** — confirming quick consultations and checkups.
 
 📊 *Chart:*  
-![Median LOS by Class (Hours)](../out/analytics/median_los_by_class_hours.png)
+![Median LOS by Class (Hours)](images/median_los_by_class_hours.png)
 
 **Insight:** Strong focus on **preventive and primary care** rather than hospital admissions — a sign of healthy system utilization.
 
@@ -38,8 +38,8 @@ Each finding connects to **real-world healthcare implications**.
 - Overweight patients likely to have elevated BP.
 
 📊 *Charts:*  
-![Blood Pressure vs BMI](../out/analytics/bp_vs_bmi_scatter.png)  
-![Vitals Correlation Heatmap](../out/analytics/vitals_correlation_heatmap.png)
+![Blood Pressure vs BMI](images/bp_vs_bmi_scatter.png)  
+![Vitals Correlation Heatmap](images/vitals_correlation_heatmap.png)
 
 **Insight:** Strengthen **weight management and hypertension prevention programs**.
 
@@ -63,7 +63,7 @@ Each finding connects to **real-world healthcare implications**.
 - Ensures **minimal bias** in health statistics and AI models trained on this dataset.
 
 📊 *Chart:*  
-![Gender Distribution](../out/analytics/gender_share.png)
+![Gender Distribution](images/gender_share.png)
 
 **Insight:** Results and predictive models derived from this dataset will generalize fairly across genders.
 
@@ -76,8 +76,8 @@ Each finding connects to **real-world healthcare implications**.
 - Younger segments (19–35 yrs) make up 21%, indicating a moderately aging population.
 
 📊 *Charts:*  
-![Age Distribution](../out/analytics/age_distribution.png)  
-![Age Groups](../out/analytics/age_groups.png)
+![Age Distribution](images/age_distribution.png)  
+![Age Groups](images/age_groups.png)
 
 **Insight:** Future planning should emphasize **geriatric services, cardiac and mobility care**.
 
@@ -89,7 +89,7 @@ Each finding connects to **real-world healthcare implications**.
 - Suggests effective zones for **community-based screenings or vaccination drives**.
 
 🗺️ *Chart:*  
-![Patients by City](../out/analytics/patients_city_bubbles.png)
+![Patients by City](images/patients_city_bubbles.png)
 
 **Insight:** Target localized public health interventions instead of uniform statewide strategies.
 
@@ -101,7 +101,7 @@ Each finding connects to **real-world healthcare implications**.
 - Indicates predictable demand cycles for outpatient and emergency care.
 
 📈 *Chart:*  
-![Encounters Trend](../out/analytics/encounters_trend.png)
+![Encounters Trend](images/encounters_trend.png)
 
 **Insight:** Use historical trends for **staff scheduling and inventory planning**.
 
@@ -116,8 +116,8 @@ Each finding connects to **real-world healthcare implications**.
 | Observations | 299,697 | 1.9% |
 
 📊 *Charts:*  
-![Missingness Overview](../out/analytics/missingness_bar.png)  
-![Row Counts](../out/analytics/row_counts.png)
+![Missingness Overview](images/missingness_bar.png)  
+![Row Counts](images/row_counts.png)
 
 **Insight:** Reliable, high-volume data supports **statistical validity** and **machine learning readiness**.
 
@@ -130,7 +130,7 @@ Each finding connects to **real-world healthcare implications**.
 - **Mean HR:** 79 bpm, **Respiratory Rate:** 14/min → within healthy ranges.
 
 📊 *Chart:*  
-![Vitals Summary Bar](../out/analytics/vitals_summary_bar.png)
+![Vitals Summary Bar](images/vitals_summary_bar.png)
 
 **Insight:** Consistent vitals logging makes this dataset **ideal for predictive health risk modeling**.
 
@@ -164,5 +164,3 @@ Each finding connects to **real-world healthcare implications**.
   `missingness_bar.png`, `row_counts.png`, `vitals_summary_bar.png`
 
 ---
-
-
