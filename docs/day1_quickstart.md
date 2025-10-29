@@ -60,3 +60,29 @@ head -3 out/patients.ndjson
 ```
 
 Each line should show one JSON object.
+
+Next, clean the data and prepare it for analytics.
+
+python src/analytics/01_load.py
+
+## Folder Structure
+
+project/
+├── data/
+│   ├── patients.csv
+│   ├── encounters.csv
+│   └── observations.csv
+│
+├── src/
+│   ├── conversion.py
+│   └── analytics/
+│       └── 01_load.py
+│
+├── out/
+│   ├── *.ndjson
+│   └── analytics/
+│       ├── *.csv
+│       └── metrics_overview.csv
+│
+└── docs/
+    └── quickstart.md
