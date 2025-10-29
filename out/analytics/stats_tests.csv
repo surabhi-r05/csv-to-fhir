@@ -1,0 +1,3 @@
+Test,Statistic,p_value,Interpretation
+T-test (LOS: Older vs Others),-2.6014,0.009288,Significant difference
+Chi-square (Hypertensive vs Gender),0.0,1.0,Independent

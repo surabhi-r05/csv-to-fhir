@@ -1,104 +1,95 @@
-# 🏥 Day 4 – Encounters Analytics
+# 🩺 Day 4 – Encounter & LOS Analysis
 
-This step focuses on analyzing patient encounters to understand care activity patterns, encounter mix, and visit durations.
-
-The analysis was performed on the `encounters.csv` dataset, producing daily encounter metrics and length-of-stay (LOS) statistics across different encounter classes.
-
----
-
-## 📈 Encounter Volume Trend
-
-🖼️ `out/analytics/encounters_trend.png`
-
-Encounters were grouped by their `START` date to measure patient flow over time.
-
-- Each point represents the number of encounters recorded per day.
-- A smoothed line and shaded area highlight fluctuations in daily activity.
-
-📁 Output: `encounters_by_day.csv`
-
-> **Insight:** Encounter volume fluctuates modestly over time, with clear patterns of peak activity on certain days, reflecting typical synthetic dataset scheduling behavior.
+**Script:** `08_encounters_analysis.py`  
+**Outputs:**  
+- `encounters_by_day.csv`  
+- `los_distribution.csv`  
+- `los_summary.csv`  
+- `encounters_trend.png`  
+- `median_los_by_class.png`  
+- `median_los_by_class_hours.png`  
+- `los_box.png`
 
 ---
 
-## ⏱️ Encounter Duration (LOS – Length of Stay)
+## 📘 Overview
 
-To better reflect real-world durations, Length of Stay (LOS) was calculated in **hours** using the difference between encounter `STOP` and `START` timestamps.
+This analysis focuses on **encounter activity and duration (Length of Stay – LOS)** across different encounter classes.  
+Key steps included:
 
-Two complementary perspectives were produced:
-
-### 1️⃣ LOS by Encounter Class (Box Plot)
-
-🖼️ `out/analytics/los_box.png`  
-📁 Raw Data: `los_distribution.csv`
-
-- Each box represents the LOS spread for a given encounter class.
-- Most outpatient and wellness encounters occur within an hour.
-- Ambulatory visits show similar short durations.
-
-> **Observation:** The dataset primarily contains same-day visits (e.g., ambulatory and wellness), with minimal inpatient representation — typical for Synthea’s synthetic data.
+- Calculating **LOS in both days and hours**  
+- Removing **outliers dynamically** per class using the 95th percentile (or >14 days)  
+- Summarizing **encounter patterns and medians**  
+- Visualizing **trends and duration distributions**
 
 ---
 
-### 2️⃣ Average LOS by Encounter Class
+## 📅 Encounters per Day
 
-🖼️ `out/analytics/avg_los_by_class.png`  
-📁 Summary Table: `los_summary.csv`
-
-| Metric | Description |
-|---------|--------------|
-| **count** | Number of encounters in each class |
-| **mean** | Average duration (hours) |
-| **median** | Median duration |
-| **max** | Longest observed stay |
-
-> **Insight:** Average durations are short (typically under one hour), consistent with preventive or outpatient care patterns.
+A time-series line chart (`encounters_trend.png`) visualizes encounter volume trends.  
+Short spikes often correspond to **wellness or ambulatory visits**, while inpatient events are rarer but longer.
 
 ---
 
-## ✅ Summary
+## 📊 LOS Summary by Encounter Class
 
-| Key Metric | Description |
-|-------------|--------------|
-| **Encounters/day** | Daily volume of patient visits |
-| **Encounter Class Mix** | Proportion of Ambulatory, Wellness, Outpatient, etc. |
-| **LOS (hours)** | Length of Stay – duration between START and STOP times |
-
-**Generated Outputs**
-
-| Type | File |
-|------|------|
-| Encounter Trend | `encounters_trend.png` |
-| LOS Boxplot | `los_box.png` |
-| Avg LOS by Class | `avg_los_by_class.png` |
-| Daily Metrics | `encounters_by_day.csv` |
-| LOS Distribution (all rows) | `los_distribution.csv` |
-| LOS Summary (aggregated) | `los_summary.csv` |
+| Encounter Class | Count | Mean (days) | Median (days) | IQR | Max | P95 Threshold (days) | Median (hours) |
+|------------------|-------|--------------|----------------|------|------|-----------------------|----------------|
+| **inpatient** | 1,834 | 1.09 | 1.02 | 0.08 | 6.0 | 1.17 | — |
+| **emergency** | 2,089 | 0.06 | 0.05 | 0.02 | 0.37 | 0.10 | 1.25 |
+| **ambulatory** | 18,851 | 0.12 | 0.03 | 0.04 | 14.0 | 0.14 | 0.75 |
+| **outpatient** | 8,890 | 0.02 | 0.01 | 0.01 | 7.0 | 0.04 | 0.25 |
+| **urgentcare** | 2,373 | 0.01 | 0.01 | 0.00 | 0.01 | 0.01 | 0.25 |
+| **wellness** | 19,106 | 0.02 | 0.01 | 0.01 | 0.05 | 0.02 | 0.25 |
 
 ---
 
-## 🧭 Insights Summary
+## 📈 Visual Highlights
 
+### 🩹 1. **Encounter Trend**
+- Shows overall encounter activity per day.
+- Helps identify **service utilization peaks**.
 
-| Encounter Class | Count | Avg LOS (hours) | Median | Max LOS (hours) | Interpretation |
-|-----------------|-------:|----------------:|--------:|----------------:|----------------|
-| **Outpatient** | 9,003 | 2,993.45 | 0.25 | 766,080.25 | Data irregularities detected — likely timestamp errors for some encounters. Most outpatient visits should be under a day, but a few extreme outliers inflated the mean. |
-| **Inpatient** | 1,838 | 432.97 | 24.4 | 485,164.67 | True multi-day hospitalizations visible (median ≈ 1 day). Outliers again inflate the mean but trend matches expected inpatient behavior. |
-| **Emergency** | 2,090 | 27.18 | 1.25 | 53,952.00 | Short emergency visits dominate; occasional long records likely reflect mis-coded or extended stays. |
-| **Ambulatory** | 18,936 | 9.86 | 0.75 | 61,608.00 | Mostly short same-day consultations (median < 1 hr). A few incorrect timestamps cause outliers. |
-| **Wellness** | 19,106 | 0.37 | 0.25 | 1.28 | Consistent with check-up visits — typically under an hour, low variance. |
-| **Urgent Care** | 2,373 | 0.25 | 0.25 | 0.25 | All visits recorded as short-duration same-day episodes, perfectly aligned with expected clinic workflow. |
+### 🕒 2. **Median LOS (Days)**
+- `median_los_by_class.png`
+- Inpatients have the longest median LOS (~1 day).
+- Other classes show sub-day durations.
+
+### ⏱️ 3. **Median LOS (Hours)**
+- `median_los_by_class_hours.png`
+- Useful for **short-stay** classes like *ambulatory*, *outpatient*, and *wellness*.
+
+### 📦 4. **LOS Boxplot**
+- `los_box.png`
+- Displays LOS distribution spread and skew per class.
+- **Inpatient** stays show modest variation around the 1-day median, while **ambulatory** visits have a long right tail (occasional extended stays).
 
 ---
 
-### 📊 Overall Interpretation
+## 💡 Key Insights
 
-- **Wellness** and **Urgent Care** visits dominate in count and show realistic durations (~15–30 minutes).  
-- **Ambulatory** and **Outpatient** classes include timestamp outliers — some with unrealistic durations extending to months.  
-- **Inpatient** encounters display reasonable medians (≈24 hours), aligning with overnight or short-stay hospitalizations.  
-- **Emergency** shows mixed durations, reflecting both brief ER consultations and a few longer emergency-to-admission transitions.  
-- Overall, **median values** provide a more reliable insight than the inflated means due to outlier timestamps.  
+- **Inpatient stays** are short (median ~1 day) but tightly distributed, showing good discharge efficiency.  
+- **Ambulatory and outpatient** visits dominate in volume and represent the majority of same-day encounters.  
+- **Emergency** encounters have a slightly longer spread, averaging ~1.25 hours.  
+- **Wellness and urgent care** are consistently brief, indicating preventive or minor consultation-type visits.  
+- Outlier filtering (>95th percentile or >14 days) ensures that only realistic encounter durations contribute to LOS statistics.
 
+---
 
+## 📁 Output Summary
 
+| File | Description |
+|------|--------------|
+| `encounters_by_day.csv` | Number of encounters per day |
+| `los_distribution.csv` | Detailed LOS data per encounter (in days & hours) |
+| `los_summary.csv` | Aggregated LOS stats, thresholds & median hours |
+| `encounters_trend.png` | Line chart of daily encounters |
+| `median_los_by_class.png` | Median LOS by encounter class (days) |
+| `median_los_by_class_hours.png` | Median LOS by encounter class (hours) |
+| `los_box.png` | Boxplot showing LOS distribution per class |
 
+---
+
+✅ **Conclusion:**  
+Encounter data reveals a strong predominance of ambulatory and wellness visits, with inpatient stays averaging around one day.  
+The inclusion of both **days and hours metrics** enhances interpretability across short- and long-duration encounter classes.
