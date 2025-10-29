@@ -67,6 +67,7 @@ python src/analytics/01_load.py
 
 ## Folder Structure
 
+```text
 project/
 ├── data/
 │   ├── patients.csv
@@ -86,3 +87,4 @@ project/
 │
 └── docs/
     └── quickstart.md
+```
