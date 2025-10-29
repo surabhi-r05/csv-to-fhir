@@ -2,15 +2,3 @@ resource,rows,missing_percent
 patients,1171,15.89
 encounters,53346,9.89
 observations,299697,1.95
-conditions,8376,6.5
-allergies,597,14.88
-medications,42989,4.32
-procedures,34981,11.11
-immunizations,15478,0.0
-devices,78,0.0
-careplans,3483,6.28
-imaging_studies,855,0.0
-organizations,1119,2.83
-providers,5855,0.0
-payers,10,2.38
-payer_transitions,3801,1.24
