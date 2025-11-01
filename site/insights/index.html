@@ -1,0 +1,1140 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Surabhi R">
+      
+      
+        <link rel="canonical" href="https://surabhi-r05.github.io/csv-to-fhir/insights/">
+      
+      
+        <link rel="prev" href="../cohort-methods/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>💡 Final Insights - Healthcare Analytics Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../styles/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#day-8-integrated-insights-report" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Healthcare Analytics Project" class="md-header__button md-logo" aria-label="Healthcare Analytics Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Healthcare Analytics Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              💡 Final Insights
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/surabhi-r05/csv-to-fhir" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    csv-to-fhir
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../day1_quickstart/" class="md-tabs__link">
+          
+  
+  
+  📊 Analytics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../analytics/" class="md-tabs__link">
+          
+  
+  
+  ⚙️ Pipeline
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  💡 Final Insights
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Healthcare Analytics Project" class="md-nav__button md-logo" aria-label="Healthcare Analytics Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Healthcare Analytics Project
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/surabhi-r05/csv-to-fhir" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    csv-to-fhir
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🏠 Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    📊 Analytics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📊 Analytics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day1_quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quickstart
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day2_data_quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day3_demographics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Demographics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day4_encounters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encounters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day5_observations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Observations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day6_cohorts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohorts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day7_stat_tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Statistical Tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ⚙️ Pipeline
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ⚙️ Pipeline
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analytics Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cohort-methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort Methods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    💡 Final Insights
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    💡 Final Insights
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-older-adults-stay-longer-and-use-more-care" class="md-nav__link">
+    <span class="md-ellipsis">
+      👵 1. Older Adults Stay Longer and Use More Care
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ambulatory-and-wellness-visits-dominate-healthcare-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏥 2. Ambulatory and Wellness Visits Dominate Healthcare Activity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bmi-and-blood-pressure-are-positively-correlated" class="md-nav__link">
+    <span class="md-ellipsis">
+      🫀 3. BMI and Blood Pressure Are Positively Correlated
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-hypertensive-patients-need-continuous-care" class="md-nav__link">
+    <span class="md-ellipsis">
+      💓 4. Hypertensive Patients Need Continuous Care
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-balanced-gender-mix-enables-fair-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚖️ 5. Balanced Gender Mix Enables Fair Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-aging-demographics-demand-chronic-care-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧓 6. Aging Demographics Demand Chronic-Care Focus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-geographic-clustering-shows-potential-for-localized-campaigns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 7. Geographic Clustering Shows Potential for Localized Campaigns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-encounter-timeline-reveals-periodic-spikes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏰ 8. Encounter Timeline Reveals Periodic Spikes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-data-quality-and-coverage-are-excellent" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 9. Data Quality and Coverage Are Excellent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-full-vital-capture-strengthens-predictive-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 10. Full Vital Capture Strengthens Predictive Readiness
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table-insights-and-implications" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Summary Table – Insights and Implications
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="day-8-integrated-insights-report">🌟 Day 8 – Integrated Insights Report<a class="headerlink" href="#day-8-integrated-insights-report" title="Permanent link">&para;</a></h1>
+<p>This report consolidates insights from demographics, encounters, vitals, and cohorts — backed by data and visuals.<br />
+Each finding connects to <strong>real-world healthcare implications</strong>.</p>
+<hr />
+<h2 id="1-older-adults-stay-longer-and-use-more-care">👵 1. Older Adults Stay Longer and Use More Care<a class="headerlink" href="#1-older-adults-stay-longer-and-use-more-care" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>T-test:</strong> LOS difference between older adults (65+) and others is <em>statistically significant</em> (t = -2.60, p = 0.0093).  </li>
+<li><strong>Median LOS (inpatient):</strong> 1.02 days vs &lt;0.05 days for other classes.  </li>
+<li><strong>Older cohort:</strong> 349 patients aged <strong>82.4 years on avg</strong>, with <strong>~77 encounters/patient</strong> — highest among all.</li>
+</ul>
+<p>📊 <em>Chart:</em><br />
+<img alt="Median LOS by Class (Days)" src="../images/median_los_by_class.png" /><br />
+📄 <em>Data:</em> <code>los_summary.csv</code>, <code>stats_tests.csv</code>, <code>cohort_summary.csv</code></p>
+<p><strong>Insight:</strong> Plan additional inpatient and post-discharge support for geriatric care.</p>
+<hr />
+<h2 id="2-ambulatory-and-wellness-visits-dominate-healthcare-activity">🏥 2. Ambulatory and Wellness Visits Dominate Healthcare Activity<a class="headerlink" href="#2-ambulatory-and-wellness-visits-dominate-healthcare-activity" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Together, <strong>ambulatory (18,851)</strong> and <strong>wellness (19,106)</strong> visits form nearly <strong>72% of total encounters (53,346)</strong>.  </li>
+<li>Median durations are <strong>0.75 hours (ambulatory)</strong> and <strong>0.25 hours (wellness)</strong> — confirming quick consultations and checkups.</li>
+</ul>
+<p>📊 <em>Chart:</em><br />
+<img alt="Median LOS by Class (Hours)" src="../images/median_los_by_class_hours.png" /></p>
+<p><strong>Insight:</strong> Strong focus on <strong>preventive and primary care</strong> rather than hospital admissions — a sign of healthy system utilization.</p>
+<hr />
+<h2 id="3-bmi-and-blood-pressure-are-positively-correlated">🫀 3. BMI and Blood Pressure Are Positively Correlated<a class="headerlink" href="#3-bmi-and-blood-pressure-are-positively-correlated" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>BMI mean:</strong> 26.4 kg/m²; <strong>Systolic BP:</strong> 121 mmHg; <strong>Diastolic BP:</strong> 80 mmHg.  </li>
+<li>The <strong>Vitals Correlation Heatmap</strong> shows a <strong>moderate positive correlation (~0.35–0.4)</strong> between BMI and both BP measures.  </li>
+<li>Overweight patients likely to have elevated BP.</li>
+</ul>
+<p>📊 <em>Charts:</em><br />
+<img alt="Blood Pressure vs BMI" src="../images/bp_vs_bmi_scatter.png" /><br />
+<img alt="Vitals Correlation Heatmap" src="../images/vitals_correlation_heatmap.png" /></p>
+<p><strong>Insight:</strong> Strengthen <strong>weight management and hypertension prevention programs</strong>.</p>
+<hr />
+<h2 id="4-hypertensive-patients-need-continuous-care">💓 4. Hypertensive Patients Need Continuous Care<a class="headerlink" href="#4-hypertensive-patients-need-continuous-care" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Hypertensive-like cohort:</strong> 157 patients, average <strong>74.1 encounters each</strong>.  </li>
+<li>Gender split: <strong>51.6% female</strong>, <strong>48.4% male</strong> → Chi-square p = 1.0 → no gender dependence.  </li>
+<li>Reflects continuous monitoring and chronic disease follow-up behavior.</li>
+</ul>
+<p>📄 <em>Data:</em> <code>cohort_summary.csv</code>, <code>stats_tests.csv</code></p>
+<p><strong>Insight:</strong> Introduce <strong>remote BP tracking</strong> or <strong>digital coaching</strong> to reduce in-person load.</p>
+<hr />
+<h2 id="5-balanced-gender-mix-enables-fair-analysis">⚖️ 5. Balanced Gender Mix Enables Fair Analysis<a class="headerlink" href="#5-balanced-gender-mix-enables-fair-analysis" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>609 females (52%)</strong>, <strong>562 males (48%)</strong> across <strong>1,171 patients</strong>.  </li>
+<li>Ensures <strong>minimal bias</strong> in health statistics and AI models trained on this dataset.</li>
+</ul>
+<p>📊 <em>Chart:</em><br />
+<img alt="Gender Distribution" src="../images/gender_share.png" /></p>
+<p><strong>Insight:</strong> Results and predictive models derived from this dataset will generalize fairly across genders.</p>
+<hr />
+<h2 id="6-aging-demographics-demand-chronic-care-focus">🧓 6. Aging Demographics Demand Chronic-Care Focus<a class="headerlink" href="#6-aging-demographics-demand-chronic-care-focus" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>341 seniors (65+)</strong>, <strong>224 mid-aged (51–65)</strong> — together form <strong>48% of population</strong>.  </li>
+<li><strong>Average age:</strong> 49.7 years; <strong>Median:</strong> 49 years.  </li>
+<li>Younger segments (19–35 yrs) make up 21%, indicating a moderately aging population.</li>
+</ul>
+<p>📊 <em>Charts:</em><br />
+<img alt="Age Distribution" src="../images/age_distribution.png" /><br />
+<img alt="Age Groups" src="../images/age_groups.png" /></p>
+<p><strong>Insight:</strong> Future planning should emphasize <strong>geriatric services, cardiac and mobility care</strong>.</p>
+<hr />
+<h2 id="7-geographic-clustering-shows-potential-for-localized-campaigns">🧭 7. Geographic Clustering Shows Potential for Localized Campaigns<a class="headerlink" href="#7-geographic-clustering-shows-potential-for-localized-campaigns" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Most patients are clustered around <strong>Chicopee, Massachusetts</strong>, with smaller clusters nearby.  </li>
+<li>Suggests effective zones for <strong>community-based screenings or vaccination drives</strong>.</li>
+</ul>
+<p>🗺️ <em>Chart:</em><br />
+<img alt="Patients by City" src="../images/patients_city_bubbles.png" /></p>
+<p><strong>Insight:</strong> Target localized public health interventions instead of uniform statewide strategies.</p>
+<hr />
+<h2 id="8-encounter-timeline-reveals-periodic-spikes">⏰ 8. Encounter Timeline Reveals Periodic Spikes<a class="headerlink" href="#8-encounter-timeline-reveals-periodic-spikes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Encounters over time</strong> show recurring peaks, likely due to seasonal illnesses or health check-up cycles.  </li>
+<li>Indicates predictable demand cycles for outpatient and emergency care.</li>
+</ul>
+<p>📈 <em>Chart:</em><br />
+<img alt="Encounters Trend" src="../images/encounters_trend.png" /></p>
+<p><strong>Insight:</strong> Use historical trends for <strong>staff scheduling and inventory planning</strong>.</p>
+<hr />
+<h2 id="9-data-quality-and-coverage-are-excellent">🧾 9. Data Quality and Coverage Are Excellent<a class="headerlink" href="#9-data-quality-and-coverage-are-excellent" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Records</th>
+<th>Missing %</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Patients</td>
+<td>1,171</td>
+<td>15.9%</td>
+</tr>
+<tr>
+<td>Encounters</td>
+<td>53,346</td>
+<td>9.9%</td>
+</tr>
+<tr>
+<td>Observations</td>
+<td>299,697</td>
+<td>1.9%</td>
+</tr>
+</tbody>
+</table>
+<p>📊 <em>Charts:</em><br />
+<img alt="Missingness Overview" src="../images/missingness_bar.png" /><br />
+<img alt="Row Counts" src="../images/row_counts.png" /></p>
+<p><strong>Insight:</strong> Reliable, high-volume data supports <strong>statistical validity</strong> and <strong>machine learning readiness</strong>.</p>
+<hr />
+<h2 id="10-full-vital-capture-strengthens-predictive-readiness">🧠 10. Full Vital Capture Strengthens Predictive Readiness<a class="headerlink" href="#10-full-vital-capture-strengthens-predictive-readiness" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Coverage:</strong> 100% for BP, weight, height, HR; <strong>97% for BMI</strong>.  </li>
+<li><strong>Average BMI:</strong> 26.4 kg/m² → mild overweight trend.  </li>
+<li><strong>Mean HR:</strong> 79 bpm, <strong>Respiratory Rate:</strong> 14/min → within healthy ranges.</li>
+</ul>
+<p>📊 <em>Chart:</em><br />
+<img alt="Vitals Summary Bar" src="../images/vitals_summary_bar.png" /></p>
+<p><strong>Insight:</strong> Consistent vitals logging makes this dataset <strong>ideal for predictive health risk modeling</strong>.</p>
+<hr />
+<h2 id="summary-table-insights-and-implications">📋 Summary Table – Insights and Implications<a class="headerlink" href="#summary-table-insights-and-implications" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th>Insight</th>
+<th>Real-World Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>Older adults stay longer</td>
+<td>Expand geriatric inpatient and step-down capacity</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>Ambulatory visits dominate</td>
+<td>Strengthen primary/preventive care</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>BMI ↔ BP correlation</td>
+<td>Integrate lifestyle coaching</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Hypertensive cohort frequent</td>
+<td>Deploy telehealth follow-up tools</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>Balanced gender mix</td>
+<td>Reliable model training</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>Aging demographics</td>
+<td>Prioritize chronic disease management</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>City clusters</td>
+<td>Enable community health outreach</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>Encounter peaks</td>
+<td>Schedule resources predictively</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>High data quality</td>
+<td>Confident analytic outcomes</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td>Full vital capture</td>
+<td>Support AI-driven preventive analytics</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>✅ <strong>Referenced Files &amp; Charts</strong></p>
+<ul>
+<li><strong>CSVs:</strong> <code>demographics.csv</code>, <code>los_summary.csv</code>, <code>cohort_summary.csv</code>, <code>observation_summary.csv</code>, <code>vitals_summary.csv</code>, <code>stats_tests.csv</code>  </li>
+<li><strong>Charts:</strong><br />
+<code>median_los_by_class.png</code>, <code>median_los_by_class_hours.png</code>,<br />
+<code>bp_vs_bmi_scatter.png</code>, <code>vitals_correlation_heatmap.png</code>,<br />
+<code>gender_share.png</code>, <code>age_distribution.png</code>, <code>age_groups.png</code>,<br />
+<code>patients_city_bubbles.png</code>, <code>encounters_trend.png</code>,<br />
+<code>missingness_bar.png</code>, <code>row_counts.png</code>, <code>vitals_summary_bar.png</code></li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../cohort-methods/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cohort Methods">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Cohort Methods
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.highlight", "search.share", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
